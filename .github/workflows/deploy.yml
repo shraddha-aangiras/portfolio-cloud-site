@@ -40,5 +40,5 @@ jobs:
 
     - name: Sync files to GCS
       run: |
-        gsutil rsync -r ./ ./gs://${{ secrets.GCP_BUCKET_NAME }}
+        gsutil rsync -r ./ gs://${{ secrets.GCP_BUCKET_NAME }}
       working-directory: ./
