@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <!-- Profile Section -->
+        <div class="profile-section">
+            <div class="profile-photo">
+                <i class="fas fa-user"></i>
+            </div>
+            <h2 class="profile-name">Shraddha Aangiras</h2>
+            <p class="profile-title">I do stuff</p>
+            <p class="profile-tagline">Some cool tagline</p>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" role="navigation">
+            <ul>
+                <li><a href="/" class="nav-link active" data-page="home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="/writing" class="nav-link" data-page="writing"><i class="fas fa-edit"></i> Writing</a></li>
+                <li><a href="/projects" class="nav-link" data-page="projects"><i class="fas fa-folder"></i> Projects</a></li>
+                <li><a href="/publications" class="nav-link" data-page="publications"><i class="fas fa-book"></i> Publications</a></li>
+                <li><a href="/news" class="nav-link" data-page="news"><i class="fas fa-newspaper"></i> News</a></li>
+            </ul>
+        </nav>
+
+        <!-- Command Palette Trigger -->
+        <div class="command-palette-trigger">
+            <button class="search-btn" id="searchBtn" title="Search (Ctrl+F)">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourprofile" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:your.email@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Home Page -->
+        <div class="page" id="home" data-title="Your Name - Portfolio">
+            <div class="container">
+                <h1>About Me</h1>
+                <section class="about-section">
+                    <div class="about-item">
+                        <h3>Introduction</h3>
+                        <p>hi hello.</p>
+                    </div>
+                    <div class="about-item">
+                        <h3>Skills</h3>
+                        <p>Add, relevant, skills</p>
+                    </div>
+                    <div class="about-item">
+                        <h3>Experience</h3>
+                        <p>Add stuff i did</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Writing Page -->
+        <div class="page hidden" id="writing" data-title="Writing - Shrad">
+            <div class="container">
+                <h1>Writing</h1>
+                <div class="writing-list">
+                    <article class="writing-item">
+                        <h3>Article 1</h3>
+                        <time class="article-date">June 18, 2025</time>
+                        <p class="article-excerpt">I still need to make this work</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Page -->
+        <div class="page hidden" id="projects" data-title="Projects - Shrad">
+            <div class="container">
+                <h1>Projects</h1>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Cloud Native Portfolio Website</h3>
+                        <p>this lol</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">There's more cloud stuff</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shraddha-aangiras" target="_blank" class="btn btn--outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://github.com/shraddha-aangiras" target="_blank" class="btn btn--primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Task Management App</h3>
+                        <p>Real-time collaborative task management with teams and projects</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourprofile/taskmanager" target="_blank" class="btn btn--outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://taskmanager-demo.com" target="_blank" class="btn btn--primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Data Visualization Dashboard</h3>
+                        <p>Interactive dashboard for business intelligence and analytics</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/yourprofile/dashboard" target="_blank" class="btn btn--outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="https://dashboard-demo.com" target="_blank" class="btn btn--primary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publications Page -->
+        <div class="page hidden" id="publications" data-title="Publications - Your Name">
+            <div class="container">
+                <h1>Publications</h1>
+                <div class="publications-list">
+                    <div class="publication-item">
+                        <h3>My first paper</h3>
+                        <div class="publication-meta">
+                            <span class="publication-venue">idr update it</span>
+                            <span class="publication-type">Paper</span>
+                            <time class="publication-date">February 31st, 2024</time>
+                        </div>
+                    </div>
+                    <div class="publication-item">
+                        <h3>My sposter</h3>
+                        <div class="publication-meta">
+                            <span class="publication-venue">Web Dev Conference 2024</span>
+                            <span class="publication-type">Conference Poster</span>
+                            <time class="publication-date">February 31st, 2024</time>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+
+        <!-- News Page -->
+        <div class="page hidden" id="news" data-title="News - Your Name">
+            <div class="container">
+                <h1>News</h1>
+                <div class="news-list">
+                    <article class="news-item">
+                        <h3>Speaking at Web Summit 2024</h3>
+                        <time class="news-date">May 1, 2024</time>
+                        <p>Excited to announce I'll be speaking about modern web development practices at Web Summit 2024.</p>
+                    </article>
+                    <article class="news-item">
+                        <h3>Open Source Project Milestone</h3>
+                        <time class="news-date">April 15, 2024</time>
+                        <p>My open source project reached 10,000 GitHub stars and 1,000 contributors!</p>
+                    </article>
+                    <article class="news-item">
+                        <h3>New Role at Tech Company</h3>
+                        <time class="news-date">March 1, 2024</time>
+                        <p>Started as Senior Full Stack Developer at a leading technology company.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Command Palette Modal -->
+    <div class="command-palette-overlay hidden" id="commandPaletteOverlay">
+        <div class="command-palette">
+            <div class="command-palette-header">
+                <input type="text" class="command-search" id="commandSearch" placeholder="Search commands..." aria-label="Search commands">
+            </div>
+            <div class="command-palette-body">
+                <div class="command-list" id="commandList">
+                    <div class="command-item" data-command="home" data-shortcut="Shift+H">
+                        <i class="fas fa-home"></i>
+                        <span class="command-text">Home</span>
+                        <span class="command-shortcut">Shift+H</span>
+                    </div>
+                    <div class="command-item" data-command="writing" data-shortcut="Shift+W">
+                        <i class="fas fa-edit"></i>
+                        <span class="command-text">Writing</span>
+                        <span class="command-shortcut">Shift+W</span>
+                    </div>
+                    <div class="command-item" data-command="projects" data-shortcut="Shift+P">
+                        <i class="fas fa-folder"></i>
+                        <span class="command-text">Projects</span>
+                        <span class="command-shortcut">Shift+P</span>
+                    </div>
+                    <div class="command-item" data-command="publications" data-shortcut="Shift+U">
+                        <i class="fas fa-book"></i>
+                        <span class="command-text">Publications</span>
+                        <span class="command-shortcut">Shift+U</span>
+                    </div>
+                    <div class="command-item" data-command="news" data-shortcut="Shift+N">
+                        <i class="fas fa-newspaper"></i>
+                        <span class="command-text">News</span>
+                        <span class="command-shortcut">Shift+N</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
