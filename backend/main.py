@@ -52,7 +52,8 @@ def is_unique_visitor(hashed_ip):
     visitor_ref = db.collection('unique_visitors').document(hashed_ip)
     visitor_doc = visitor_ref.get()
 
-    now = datetime.datetime.utcnow()
+    # Use timezone-aware UTC datetime
+    now = datetime.datetime.now(datetime.timezone.utc)
 
     if visitor_doc.exists:
         last_visit_str = visitor_doc.to_dict().get('last_visit')
@@ -70,6 +71,7 @@ def is_unique_visitor(hashed_ip):
     else:
         visitor_ref.set({'last_visit': now.isoformat()})
         return True
+
 
 @app.route('/')
 def hello():
