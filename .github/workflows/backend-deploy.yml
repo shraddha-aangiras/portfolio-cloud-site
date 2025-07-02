@@ -37,3 +37,13 @@ jobs:
         TF_VAR_bucket_name: "resume-site-2"
         TF_VAR_domain_name: "www.aangiras.com"
       working-directory: ./iac
+
+    - name: Deploy Backend to Cloud Run
+      working-directory: ./backend
+      run: |
+        gcloud run deploy backend \
+          --source . \
+          --region us-central1 \
+          --platform managed \
+          --allow-unauthenticated
+
