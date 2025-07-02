@@ -22,11 +22,37 @@ class PortfolioApp {
         this.init();
     }
 
+    async getVisitorCount() {
+        try {
+          const response = await fetch("https://backend-272833152577.us-central1.run.app/visitor-count", {
+            method: "POST"
+          });
+          
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          
+          const data = await response.json();
+          console.log("Visitor count data:", data);
+      
+          const countEl = document.getElementById("count");
+          if (countEl) {
+            countEl.innerText = data.count;
+          } else {
+            console.warn("Element with id 'count' not found.");
+          }
+        } catch (error) {
+          console.error("Error fetching visitor count:", error);
+        }
+      }
+      
+
     init() {
         this.setupEventListeners();
         this.setupRouting();
         this.handleInitialRoute();
     }
+
 
     setupEventListeners() {
         // Navigation links
@@ -351,6 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
         window.portfolioApp = new PortfolioApp();
         console.log('Portfolio App initialized successfully');
+        window.portfolioApp.getVisitorCount();
     } catch (error) {
         console.error('Failed to initialize Portfolio App:', error);
     }
