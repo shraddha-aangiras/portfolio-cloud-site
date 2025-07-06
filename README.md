@@ -3,7 +3,7 @@
 A full-fledged, production-grade **cloud-native application** — complete with automated CI/CD, infrastructure-as-code, real-time analytics, robust API design, monitoring + alerting, and integrations across Google Cloud, GitHub Actions, and Slack.
 
 ### 🌐 Live Project
-🔗 [aangiras.com](https://www.aangiras.com) 
+🔗 [aangiras.com](https://www.aangiras.com) - dummy website with not much info. Made it to learn DevOps & Full Stack Dev!
 
 ---
 
