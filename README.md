@@ -13,25 +13,29 @@ A full-fledged, production-grade **cloud-native application** — complete with 
 |----------------------|------------------------------------------------------------------------------------|
 | **Frontend**         | HTML, CSS, JavaScript, GitHub Actions, Google Cloud Storage (Static Hosting), Google Cloud CDN |
 | **Backend/API**      | Python, Flask, Google Cloud Run, Firestore, Google API Gateway |
-| **CI/CD**            | GitHub Actions (multi-step workflows for frontend & backend), Terraform            |
+| **CI/CD**            | GitHub Actions with multi-step workflows for frontend, backend, Terraform, and Cypress |
 | **Infrastructure-as-Code (IaC)** | Terraform (modular config for GCS, Load Balancer, SSL, API Gateway, Monitoring) |
-| **Monitoring & Alerting** | Google Cloud Monitoring, PagerDuty, Slack Webhook Integration, Error Reporting |
+| **Testing**          | Cypress (E2E browser testing for unique visitor count), Postman (API testing), GitHub Actions smoke tests |
 | **Testing**          | Cypress (E2E browser testing)                                                      |
-| **Misc**             | CORS, JSON APIs, RESTful design principles, Slack ChatOps                          |
+| **Misc**             | CORS, JSON APIs, RESTful design principles, Slack ChatOps, Usage Metrics           |
 
 ---
 
 ## 💡 Key Features
 
-- ✅ **API-first architecture** using Flask on Cloud Run with serverless deployment
-- 📊 **Live visitor counter** backed by Firestore DB
-- 🌎 **CDN-accelerated global delivery** via GCP Load Balancer and Google Cloud CDN
-- 🔐 **HTTPS everywhere** with managed SSL certs and automatic HTTP to HTTPS redirection
-- 🛠️ **End-to-End CI/CD pipelines** using GitHub Actions for both frontend and backend
-- 🧪 **Browser-based smoke tests** using Cypress, integrated into deployment workflows
-- 🔔 **Monitoring & alerts** for uptime, latency, and crash notifications via GCP Monitoring, Email & Slack
-- 📈 **Fully modular and declarative** infrastructure using Terraform
-- ⚡ **Fully serverless, autoscaling backend** — zero-maintenance infrastructure
-- 🧠 **Security best practices**: Service accounts, GitHub Secrets, no hardcoded creds
+- ✅ **Real-time unique visitor tracking** using Firestore’s document-based reads and per-IP logic
+- 🧠 **Smart counter logic**: visitors are counted only once per defined session/IP period (no blind increments!)
+- 📊 **Live usage analytics** integrated with frontend
+- 🌎 **CDN-accelerated global delivery** with caching + cache-busting where necessary
+- 🛠️ **Automated, multi-layer CI/CD pipelines** for backend, frontend, and infrastructure (Terraform deploys, bucket sync, API validation, Cypress tests)
+- 🔔 **Multi-channel alerting** with uptime checks, email, Slack, and optional PagerDuty integration
+- ✅ **Infrastructure observability dashboards** and monitoring policies as code
+- 📦 **Smoke-tested production deployments** using Cypress (ensures website and API sync and count rendering works)
+- 🔐 **Fully secure backend APIs** served over HTTPS via API Gateway
+- 🧪 **Manual and automated testing** using Postman (manual) and Cypress (automated browser test)
+- ⚡ **Fully serverless**, autoscaling backend — zero-maintenance and resilient
+- 🔁 **Idempotent deployment** — all infrastructure can be torn down and re-deployed with Terraform
+- 🌩️ **DevOps heavy lifting**: Load Balancers, IAM roles, Monitoring, SSL, API Gateway, DNS routing, all configured as code
 
 ---
+
