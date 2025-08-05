@@ -8,3 +8,6 @@ dist/
 .env
 venv/
 __pycache__/
+terraform.tfstate.backup
+terraform.tfstate
+*.tfvars
