@@ -27,10 +27,16 @@ jobs:
     - name: Install Terraform
       uses: hashicorp/setup-terraform@v2
 
-    - name: Terraform Init & Apply
-      run: |
-        terraform init
-        terraform apply -auto-approve
+    - name: Terraform Init (with backend)
+      run: terraform init -reconfigure
+      working-directory: ./iac
+
+    - name: Terraform Validate
+      run: terraform validate
+      working-directory: ./iac
+
+    - name: Terraform Apply
+      run: terraform apply -auto-approve
       env:
         TF_VAR_project_id: ${{ secrets.GCP_BACKEND_PROJECT_ID }}
         TF_VAR_region: "us-central1"
@@ -46,4 +52,3 @@ jobs:
           --region us-central1 \
           --platform managed \
           --allow-unauthenticated
-
