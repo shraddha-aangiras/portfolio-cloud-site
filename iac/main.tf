@@ -1,3 +1,10 @@
+terraform {
+  backend "gcs" {
+    bucket  = "resume-site-tfstate"
+    prefix  = "terraform/state"
+  }
+}
+
 provider "google" {
   project = var.project_id
   region  = var.region
